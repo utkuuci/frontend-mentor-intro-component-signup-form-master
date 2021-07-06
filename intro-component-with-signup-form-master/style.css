@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  background: url('./images/bg-intro-desktop.png');
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.card{
+  box-shadow: 0 8px 1px rgba(0, 0, 0, .2);
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+.container{
+  height: 100%;
+  background-color: rgba(213, 0, 0, 0.6);
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .text{
+  width: 500px;
+  margin-right: 75px;
+  animation: animation2 .5s ease-in-out;
+}
+
+.container .text h1{
+  margin-bottom: 35px;
+  font-size: 50px;
+  color: white;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.container .text p{
+  color: #ddd;
+}
+
+.container .form-content{
+  animation: animation1 .5s ease-in-out;
+  width: 540px;
+}
+
+.container .form-content .card-one{
+  margin-bottom: 23px;
+  text-align: center;
+  background-color: var(--blue);
+  color: #ddd;
+}
+.container .form-content .card-one span{
+  font-weight: 600;
+  color: white;
+}
+
+.container .form-content .card-two{
+  padding: 40px;
+  height: 445px;
+  text-align: center;
+}
+
+.container .form-content .card-two .btn{
+  width: 100%;
+  display: inline-block;
+  background-color: var(--green);
+  padding: 12.5px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 1.2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+  transition: transform .2s ease-in-out;
+  outline: none;
+}
+
+.container .form-content .card-two .btn:hover{
+  transform: scale(.98);
+}
+
+.container .form-content .card-two .form-control input{
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 50px;
+  margin-bottom: 20px;
+  outline-color: var(--blue);
+  border-radius: 5px;
+  padding: 0 25px;
+  font-size: 15px;
+}
+.container .form-content .card-two .form-control input::placeholder{
+  font-size: 15px;
+}
+
+.container .form-content .card-two > p {
+  margin-top: 15px;
+  font-size: 10px;
+  color: var(--grayish-blue);
+}
+
+.container .form-content .card-two > p a{
+  color: var(--red);
+  text-decoration: none;
+}
+
+@keyframes animation1{
+  0%{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes animation2{
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 545px){
+  .container{
+    flex-direction: column;
+  }
+  .container .text{
+    margin: 65px auto;
+    width: 315px;
+    height: 210px;
+    text-align: center;
+  }
+  .container .text h1{
+    font-size: 30px;
+  }
+  .container .form-content{
+    width: 325px;
+  }
+}
+
+@media (max-width: 1115px){
+  .container{
+    flex-direction: column;
+  }
+  .container .text{
+    margin: 65px auto;
+    /* width: 315px; */
+    /* height: 210px; */
+    text-align: center;
+  }
+  
+}
